@@ -63,3 +63,5 @@ Para este proyecto se concidera utiluzar.
 8. Contenedor para la comida
 
 9. Modulo Wi-fi ESP8266.
+
+10. Firmata (web app)
