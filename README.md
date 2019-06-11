@@ -6,7 +6,8 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivo](#3-objetivo)
-* [3. Consideraciones tecnicas](#3-consideraciones-tecnicas)
+* [4. Consideraciones tecnicas](#4-consideraciones-tecnicas)
+* [5. Entregable](#4-entregable)
 
 
 ***
@@ -29,39 +30,36 @@ En este proyecto se va a abordar la problemática con respecto al cuidado en la
 
 ## 3. Objetivo
 
-La primera parte de los objetivos específicos consiste en la recopilación y procesamiento de la información, seguidamente, en la etapa dos se procede al diseño mecánico y electrónico del dispensador, luego en la etapa tres se abarca el desarrollo software y finalmente en la cuarta etapa se documentan los resultados de las pruebas de funcionamiento.
+El objetivo principal es aprender a construiruna interfaz web usando el framework Firmata. Para poder interactuar con el usuario y el dispensador.
+
+Finalmente, la interfaz debe estar diseñada específicamente para correr en celular.
 
 ### objetivo general.
 
 Desarrollar un dispensador de comida para mascotas que sea automático, programable y
 controlado remotamente.
 
-### objetivos especificos
+### objetivos especificos (historias de usuario)
 
-1. Realizar el estado del arte relacionado con la construcción de dispensadores/dosificadores de comida para mascotas automáticos, programables y controlables de manera remota.
+1. Primera historia de usuario.
+El usuario necesita un visualizar una pagina con dos botones para que controlen el flujo del pispensador.
 
-2. Realizar las especificaciones del sistema y diseñar la estructura mecánica y el control electrónico del dispensador automático.
+2. Segunda historia de usuario.
+El arduino ya debe estar programado, listo para ser conectado y funcionable.
+
 
 ## 4. Consideraciones tecnicas.
 
 Para este proyecto se concidera utiluzar.
 
+Este proyecto se debe "resolver" de forma individual.
+
+Trabaja en una historia hasta terminarla antes de pasar a la siguiente. Trabaja hasta la historia que puedas en el tiempo especificado.
+
+La lógica del proyecto debe estar implementada completamente en JavaScript (ES6+), HTML y CSS y empaquetada de manera automatizada. En este proyecto utilizaremos React.
+
 1. Arduino
 
 2. Johnny five (framework para javascript)
 
-3. Blynk (App)
-
-4. Regulador de voltaje
-
-5. Rele de 5 voltios CC
-
-6. Servo     SG-5010
-
-7. Servo    SG-90
-
-8. Contenedor para la comida
-
-9. Modulo Wi-fi ESP8266.
-
-10. Firmata (web app)
+3. Firmata (web app)
