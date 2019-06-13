@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title></title>
+	<style>
+		.btn{
+			width: 200px;
+			padding: 15px 32px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+   <div role="main">
+
+      	<div class="row">
+
+      		<div>
+      			<p> <button id="b_stop" type="button" class="btn btn-lg btn-default">Blink</button>
+		       	<p> <button id="b_off" type="button" class="btn btn-lg btn-default">Led OFF</button>
+		       	<p> <button id="b_on" type="button" class="btn btn-lg btn-default">Led ON</button>
+      		</div>
+      	</div>
+      	<div class="row">
+   	</div>
+    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+   <script src="app.js"></script>
+
+   <script>
+	   	var socket = io();
+
+		function stopBlink(){
+		    socket.emit('stop');
+		}
+		function offLed(){
+		    socket.emit('off');
+		}
+		function onLed(){
+		    socket.emit('on');
+		}
+
+		document.getElementById('b_stop').onclick = stopBlink;
+		document.getElementById('b_off').onclick = offLed;
+		document.getElementById('b_on').onclick = onLed;
+	</script>
+</body>
+</html>
