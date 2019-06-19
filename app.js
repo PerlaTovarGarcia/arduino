@@ -15,26 +15,23 @@ var board = new five.Board({
 
 board.on('ready', function () {
     var speed, commands, motors;
-    var anode = new five.Led(13);
+    const servo = new five.Servo(9);
 
-    commands = null;
-
-    anode.on();
 
     //anode.blink(1000);
 
-    var blink = true;
+
 
     io.on('connection', function (socket) {
 
         socket.on('off', function (){
           console.log('encendido');
-            anode.off();  // to shut it off (stop doesn't mean "off")
+            servo.min();  // to shut it off (stop doesn't mean "off")
         });
 
         socket.on('on', function (){
           console.log('apagado');
-            anode.on(); // to turn on, but not blink
+            servo.max(); // to turn on, but not blink
         });
 
     });

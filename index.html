@@ -15,7 +15,6 @@
       	<div class="row">
 
       		<div>
-      			<p> <button id="b_stop" type="button" class="btn btn-lg btn-default">Blink</button>
 		       	<p> <button id="b_off" type="button" class="btn btn-lg btn-default">Led OFF</button>
 		       	<p> <button id="b_on" type="button" class="btn btn-lg btn-default">Led ON</button>
       		</div>
@@ -29,9 +28,6 @@
    <script>
 	   	var socket = io();
 
-		function stopBlink(){
-		    socket.emit('stop');
-		}
 		function offLed(){
 		    socket.emit('off');
 		}
@@ -39,7 +35,6 @@
 		    socket.emit('on');
 		}
 
-		document.getElementById('b_stop').onclick = stopBlink;
 		document.getElementById('b_off').onclick = offLed;
 		document.getElementById('b_on').onclick = onLed;
 	</script>
