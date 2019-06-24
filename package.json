@@ -7,6 +7,7 @@
     "arduino-firmata": "^0.3.4",
     "express": "^4.17.1",
     "firmata-party": "^1.5.10",
+    "http-server": "^0.11.1",
     "johnny-five": "^1.1.0",
     "socket.io": "^2.2.0"
   },
