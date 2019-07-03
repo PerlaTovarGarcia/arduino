@@ -1,4 +1,4 @@
-export PATH=./node_modules/.bin:$PATH;
+//export PATH=./node_modules/.bin:$PATH;
 
 var express = require('express');
 var app = express();
@@ -6,7 +6,7 @@ var io = require('socket.io')(app.listen(8080));
 var five = require('johnny-five');
 
 
-app.use(express.static(__dirname + '/app'));
+app.use(express.static(__dirname + '/'));
 
 app.get('/', function (req,res) {
   	res.sendFile(__dirname + '/index.html');
@@ -21,7 +21,7 @@ board.on('ready', function () {
     const servo = new five.Servo(9);
 
 
-    const proximity = new five.Proximity({
+    /*const proximity = new five.Proximity({
     controller:'HCSR04I2CBACKPACK',
     //controller: "HCSR04",
     pin: 7,
@@ -42,7 +42,7 @@ board.on('ready', function () {
 
       }
       console.log("The obstruction has moved.");
-    });
+    });*/
 
 
 
@@ -53,13 +53,14 @@ board.on('ready', function () {
     io.on('connection', function (socket) {
 
         socket.on('off', function (){
-          console.log('encendido');
+          console.log('abierto');
             servo.min();  // to shut it off (stop doesn't mean "off")
         });
 
         socket.on('on', function (){
-          console.log('apagado');
+          console.log('cerrado');
             servo.max(); // to turn on, but not blink
+
         });
 
     });

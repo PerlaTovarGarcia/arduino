@@ -1,42 +1,104 @@
-<html>
-<head>
-	<title></title>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+	<title>Meketrefe</title>
+	<!--<link rel="stylesheet" type="text/css" href="style.css"-->
 	<style>
-		.btn{
-			width: 200px;
-			padding: 15px 32px;
-			text-align: center;
-		}
+	body {
+
+	  display:flex;
+	  justify-content: center;
+
+	}
+
+	#inputCheck{
+	  display: none;
+	}
+
+	#b_off{
+	  margin-top: 30%;
+	  display:block;
+	  width: 200px;
+	  height: 200px;
+	  background: #fff;
+	  line-height: 200px;
+	  text-align: center;
+	  font-size: 700%;
+	  border-radius: 50%;
+	  color: #777;
+	  cursor: pointer;
+	  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+	}
+
+	#b_on{
+	  margin-top: 30%;
+	  display:block;
+	  width: 200px;
+	  height: 200px;
+	  background: #fff;
+	  line-height: 200px;
+	  text-align: center;
+	  font-size: 700%;
+	  border-radius: 50%;
+	  color: #777;
+	  cursor: pointer;
+	  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+	}
+
+	.inputCheck:checked + #b_off{
+	  background: #eee;
+	  box-shadow: inset 0 12px 35px rgba(0, 0, 0, 0.5);
+	  color: rgba(0,255,0,0.7);
+	}
+
 	</style>
 </head>
 <body>
-   <div role="main">
 
-      	<div class="row">
 
-      		<div>
-		       	<p> <button id="b_off" type="button" class="btn btn-lg btn-default">Led OFF</button>
-		       	<p> <button id="b_on" type="button" class="btn btn-lg btn-default">Led ON</button>
-      		</div>
-      	</div>
-      	<div class="row">
-   	</div>
-    </div>
+
+
+					<div>
+						<img src="logo.png">
+						<button id="b_off"><i class="fas fa-bone"></i></button>
+					 	<button  id="b_on"><i class="fas fa-paw"></i></button>
+					</div>
+						<span id="mensaje"></span>
+
+
+	 <script src="https://kit.fontawesome.com/894084e997.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
-   <script src="app.js"></script>
+   <script type="text/javascript" src="selectivos/arduino/app.js"></script>
 
    <script>
-	   	var socket = io();
+	   const socket = io();
 
 		function offLed(){
 		    socket.emit('off');
+				lalalalala(offLed);
 		}
 		function onLed(){
 		    socket.emit('on');
+				kakakakakaka(onLed);
 		}
+
 
 		document.getElementById('b_off').onclick = offLed;
 		document.getElementById('b_on').onclick = onLed;
+
+		var mensaje = document.querySelector('#mensaje');
+			var aika;
+			function lalalalala(){
+				aika=setTimeout(function(){
+					mensaje.innerText=("Se esta llevando mucho el plato de aikaBB");
+				},7000);
+			};
+
+			function kakakakakaka(){
+				clearTimeout(onLed)
+			};
+
 	</script>
 </body>
 </html>
