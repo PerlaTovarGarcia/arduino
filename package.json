@@ -9,7 +9,7 @@
     "firmata-party": "^1.5.10",
     "http-server": "^0.11.1",
     "johnny-five": "^1.1.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.5.0"
   },
   "devDependencies": {},
   "scripts": {
